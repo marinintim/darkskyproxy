@@ -29,4 +29,4 @@ The default port is 8050, but you can choose your own with PORT env variable.
 
 darkskyproxy is under ISC license.
 
-[Tim Marinini](http://marinin.xyz), 2017
+[Tim Marinin](http://marinin.xyz), 2017
