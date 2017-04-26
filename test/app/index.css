@@ -1,0 +1,61 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+body {
+	font: 5.5vw/1.25 Helvetica Neue, Apple Color Emoji, Arial, sans-serif;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 10% repeat(2, 1fr) 10%;
+	height: 100%;
+}
+
+.temp {
+	grid-column: 2 / 8;
+	grid-row-start: 2;
+}
+
+.take-this {
+	grid-row-start: 3;
+	grid-column: 8 / 12;
+	text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 45px;
+	}
+	.grid {
+		grid-template-rows: 5% 45% 45% 5%;
+	}
+	.take-this {
+
+		grid-column: 2 / 12;
+		text-align: inherit;
+	}
+	.temp {
+		grid-column: 2 / 12;
+	}
+}
+
+.nobr {
+	white-space: pre;
+}
+
+footer {
+	padding: 1em .5em;
+}
+footer a {
+	text-decoration: none;
+	font-style: smallcaps;
+}
