@@ -6,5 +6,13 @@
   "repository": "https://github.com/marinintim/darkskyproxy.git",
   "author": "Tim Marinin <mt@marinin.xyz>",
   "license": "ISC",
-  "bin": {"darkskyproxy": "index.js"}
+  "scripts": {
+    "test": "ava test/unit"
+  },
+  "bin": {
+    "darkskyproxy": "index.js"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1"
+  }
 }
