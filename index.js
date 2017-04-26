@@ -11,7 +11,7 @@ const addApiKey = (url, apiKey) => {
 }
 
 const proxy = (req, res) => {
-  let url = addApiKey(req.url)
+  let url = addApiKey(req.url, api_key)
 
   return https.get(url, (dsRes) => {
     const headers = dsRes.headers
