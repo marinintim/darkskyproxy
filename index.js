@@ -12,7 +12,13 @@ const addApiKey = (url, apiKey) => {
 
 const proxy = (req, res) => {
   let url = addApiKey(req.url)
-  return https.get(url, (dsRes) => dsRes.pipe(res)).pipe(req)
+
+  return https.get(url, (dsRes) => {
+    const headers = dsRes.headers
+    headers['Access-Control-Allow-Origin'] = '*'
+    res.writeHead(dsRes.statusCode, headers)
+    dsRes.pipe(res)
+  }).pipe(req)
 }
 
 const handleRequest = (req, res) => {
